@@ -1,8 +1,4 @@
 #!/usr/bin/env python3
-# /// script
-# requires-python = ">=3.10"
-# dependencies = []
-# ///
 
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path

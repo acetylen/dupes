@@ -2,9 +2,15 @@
 
 A tool to find duplicate files in a directory.
 
+## Installation
+
+    $ uv tool install listdupes
+
+
+## Usage
 
 ```
-usage: dupes.py [-h] [-v] [-o] [-0] [-c] [--version] path
+usage: listdupes [-h] [-v] [-o] [-0] [-c] [--version] path
 
 Find duplicate files in a file tree, ignoring empty files.
 

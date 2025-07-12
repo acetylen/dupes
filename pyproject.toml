@@ -3,12 +3,12 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "dupes"
+name = "listdupes"
 version = "2025.07.12"
 authors = [
   {name="Emil Tylén", email=""}
 ]
-description = "A tool that finds duplicate files in a directory tree"
+description = "A tool to list duplicate files in a directory tree"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = []
@@ -29,8 +29,8 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/acetylen/dupes"
-Issues = "https://github.com/acetylen/dupes/issues"
+Homepage = "https://github.com/acetylen/listdupes"
+Issues = "https://github.com/acetylen/listdupes/issues"
 
 [project.scripts]
-dupes = "dupes:main"
+listdupes = "listdupes:main"
