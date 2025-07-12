@@ -44,7 +44,7 @@ class ListDupes:
     def find_duplicates(self, path: Path):
         log.debug(f"Scanning {path.absolute()}...")
         with ThreadPoolExecutor() as executor:
-            for result in executor.map(cond_hash, path.glob("**")):
+            for result in executor.map(cond_hash, path.rglob("*")):
                 if result is None:
                     continue
                 name, checksum = result
