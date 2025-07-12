@@ -1,1 +1,1 @@
-from .listdupes import main
+from .main import main
