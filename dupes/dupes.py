@@ -9,7 +9,8 @@ from pathlib import Path
 import hashlib
 import os
 
-__version__ = "1.0.0"
+import importlib.metadata
+__version__ = importlib.metadata.version(__package__ or __name__)
 
 def cond_hash(file: Path) -> tuple[str, str] | None:
     if file.is_dir() or file.stat().st_size == 0:
@@ -29,7 +30,7 @@ def main():
     parser.add_argument("-o", "--dupes-only", action="store_true", help="print only names of duplicate files")
     parser.add_argument("-0", "--null", action="store_true", help="when -o is set, end lines with NUL instead of newline",)
     parser.add_argument("-c", "--count", action="store_true", help="print only the number of duplicates")
-    parser.add_argument("--version", action="version", version=f"dupes {__version__}")
+    parser.add_argument("--version", action="version", version=f"dupes v{__version__}")
     args = parser.parse_args()
 
     if args.null and not args.dupes_only:
