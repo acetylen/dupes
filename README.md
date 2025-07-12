@@ -1,4 +1,4 @@
-# Dupes
+# ListDupes
 
 A tool to find duplicate files in a directory.
 
