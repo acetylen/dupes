@@ -26,7 +26,7 @@ def main():
     parser.add_argument("-o", "--dupes-only", action="store_true", help="print only names of duplicate files")
     parser.add_argument("-0", "--null", action="store_true", help="when -o is set, end lines with NUL instead of newline",)
     parser.add_argument("-c", "--count", action="store_true", help="print only the number of duplicates")
-    parser.add_argument("--version", action="version", version=f"dupes v{__version__}")
+    parser.add_argument("--version", action="version", version=f"{__package__} v{__version__}")
     args = parser.parse_args()
 
     if args.null and not args.dupes_only:
@@ -34,6 +34,8 @@ def main():
 
     hashes = {}
     scanned = 0
+    if args.verbose >= 2:
+        print(f"starting at {args.path.absolute()}...")
     with ThreadPoolExecutor() as executor:
         for result in executor.map(cond_hash, args.path.glob("**")):
             if result is None:
