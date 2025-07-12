@@ -12,6 +12,9 @@ description = "A tool to list duplicate files in a directory tree"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = []
+dev-dependencies = [
+  "tox"
+]
 license = "GPL-3.0-or-later"
 license-files = ["LICENSE"]
 keywords = ["cli", "tool", "listdupes", "duplicate"]
@@ -33,3 +36,11 @@ Issues = "https://github.com/acetylen/listdupes/issues"
 
 [project.scripts]
 listdupes = "listdupes:main"
+
+[tool.tox]
+requires = ["tox>4.19"]
+env_list = ["3.13", "3.12", "3.11", "3.10"]
+
+[tool.tox.env_run_base]
+description = "run under {base_python}"
+commands = [["python", "-m", "unittest"]]
