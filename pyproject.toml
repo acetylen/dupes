@@ -13,7 +13,9 @@ readme = "README.md"
 requires-python = ">=3.10"
 dependencies = []
 dev-dependencies = [
-  "tox"
+  "uv",
+  "tox",
+  "uv-tox",
 ]
 license = "GPL-3.0-or-later"
 license-files = ["LICENSE"]
