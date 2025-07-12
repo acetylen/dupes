@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "listdupes"
-version = "2025.07.12.2"
+version = "2025.07.12.3"
 authors = [
   {name="Emil Tylén", email=""}
 ]
